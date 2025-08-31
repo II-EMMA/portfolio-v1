@@ -19,6 +19,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
+          
           </Link> */}
           <FaInstagram />
         </div>
