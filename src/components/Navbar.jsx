@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import ShinyEffect from "./ShinyEffect";
 import Link from "next/link";
 
 const Navbar = () => {
