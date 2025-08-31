@@ -12,30 +12,35 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div className="grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto mt-14 relative lg:text-start text-center text-wrap">
+    <div className="grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto md:mt-14 mt-12 relative lg:text-start text-center text-wrap">
       <div className="px-3 ">
         <TypeAnimation
           sequence={[
-            "Developer",
+            "Frontend Developer",
             1000,
-            "Web designer",
+            "Pixel‑Perfect Specialist",
             1000,
-            "Web Auditor",
+            "Figma → Next.js Conversion",
+            1000,
+            "Live‑Site UI Replication",
             1000,
           ]}
           speed={50}
           repeat={Infinity}
-          className="font-bold text-gray-200 text-2xl italic"
+          className="font-bold text-purple-300  text-2xl italic"
         />
 
         <p className="text-gray-200 md:text-6xl text-3xl tracking-tight">
-          HEY,I AM <br />
+          HEY ,I AM
+          <br />
           <span className="">EMMA</span> <br />
         </p>
         <p className="text-gray-300">
-          As a passionate web front-end developer with over 5 years of
-          experience, I have a proven track record of creating visually stunning
-          and responsive websites.
+          I help brands and teams achieve{" "}
+          <span className="font-semibold">flawless visual fidelity</span> —
+          turning any Figma design or live website into a reusable, SEO‑ready
+          Next.js template with <span className="italic">zero compromise</span>{" "}
+          on design accuracy, performance, or accessibility.
         </p>
 
         <div className="self-start flex lg:flex-row flex-col items-center  gap-4 mt-6 mb-4 md:mb-0">
@@ -79,7 +84,7 @@ const Hero = () => {
 
       <img
         src={profilepic.src}
-        className="w-[340px] md:w-[400px] rounded-full md:mx-0 mx-4"
+        className="w-[340px] md:w-[400px] rounded-full md:mx-0 mx-4 mt-14 mb-16 md:mb-0 md:mt-0"
       />
     </div>
   );
