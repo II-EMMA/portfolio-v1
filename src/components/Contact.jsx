@@ -6,10 +6,13 @@ const Contact = () => {
       className="px-6 max-w-[1000px] mx-auto grid md:grid-cols-2 place-items-center"
       id="contact"
     >
-      <div className="max-w-[600px] -skew-y-6 font-bold text-gray-300 mb-16 lg:mb-0 ">
+      <div className="max-w-[600px] -skew-y-6 font-bold dark:text-gray-300 text-gray-700 mb-16 lg:mb-0 ">
         <div className="flex flex-row">
           <p className="mt-6 text-4xl">We can connect on</p>
-          <a href="#" className="ml-4 text-7xl text-gray-300">
+          <a
+            href="#"
+            className="ml-4 text-7xl dark:text-gray-300 text-gray-700"
+          >
             <AiFillLinkedin />
           </a>
         </div>
@@ -30,14 +33,14 @@ const Contact = () => {
           id="name"
           placeholder="Your Name ..."
           name="name"
-          className="placeholder:text-white mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          className="dark:placeholder:text-white placeholder:text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
         />
         <input
           type="email"
           id="email"
           placeholder="Your Email ..."
           name="email"
-          className="placeholder:text-white mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          className="dark:placeholder:text-white placeholder:text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
         />
         <textarea
           name="textarea"
@@ -45,7 +48,7 @@ const Contact = () => {
           cols="30"
           rows="4"
           placeholder="Your Message ..."
-          className="placeholder:text-white mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
+          className="dark:placeholder:text-white placeholder:text-black mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4"
         />
         <button
           type="submit"

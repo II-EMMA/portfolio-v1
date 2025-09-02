@@ -1,5 +1,6 @@
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { NextThemeProvider } from "@/components/ThemeProvider";
 
 const geistSans = Space_Grotesk({
   variable: "--font-space-grotesk-sans",
@@ -13,8 +14,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.className}`}>{children}</body>
+    <html
+      suppressHydrationWarning
+      lang="en"
+      className="scroll-smooth dark:bg-[#020403] bg-white"
+    >
+      <body suppressHydrationWarning className={`${geistSans.className}`}>
+        <NextThemeProvider>{children}</NextThemeProvider>
+      </body>
     </html>
   );
 }

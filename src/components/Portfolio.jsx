@@ -25,7 +25,7 @@ const projects = [
   {
     img: project2.src,
     title: "Project #2",
-    description: "marcomista sologan company website built with Next.js.",
+    description: "Marcomista sologan company website.",
     links: {
       site: "https://marcomesta.vercel.app",
       github: "#",
@@ -50,7 +50,7 @@ const Portfolio = () => {
           />
         </div>
 
-        <p className="text-gray-200 my-4">
+        <p className="dark:text-gray-200 text-gray-600 my-4">
           {projects[currentProject].description}
         </p>
         <div className="flex space-x-4">

@@ -13,7 +13,7 @@ import Link from "next/link";
 const Hero = () => {
   return (
     <div className="grid md:grid-cols-2 place-items-center max-w-[1200px] mx-auto md:mt-14 mt-12 relative lg:text-start text-center text-wrap">
-      <div className="px-3 ">
+      <div className="px-3">
         <TypeAnimation
           sequence={[
             "Frontend Developer",
@@ -27,15 +27,15 @@ const Hero = () => {
           ]}
           speed={50}
           repeat={Infinity}
-          className="font-bold text-purple-300  text-2xl italic"
+          className="font-bold dark:text-purple-300  text-purple-500 text-2xl italic"
         />
 
-        <p className="text-gray-200 md:text-6xl text-3xl tracking-tight">
+        <p className="dark:text-gray-200 text-gray-600 md:text-6xl text-3xl tracking-tight">
           HEY ,I AM
           <br />
           <span className="">EMMA</span> <br />
         </p>
-        <p className="text-gray-300">
+        <p className="dark:text-gray-300 text-gray-700">
           I help brands and teams achieve{" "}
           <span className="font-semibold">flawless visual fidelity</span> —
           turning any Figma design or live website into a reusable, SEO‑ready
@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="self-start flex lg:flex-row flex-col items-center  gap-4 mt-6 mb-4 md:mb-0">
           <button
             className="transform transition-transform hover:scale-105 hover:shadow-lg
-                z-10 cursor-pointer font-bold text-gray-200 w-1/2 p-2
+                z-10 cursor-pointer font-bold dark:text-gray-200 text-gray-700 w-1/2 p-2
                 border border-purple-500 rounded-xl"
           >
             Download CV
