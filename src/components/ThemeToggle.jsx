@@ -8,9 +8,11 @@ export default function ThemeSwitch() {
   return (
     <button
       suppressHydrationWarning
-      className={`w-10 h-10 rounded-full border ${
-        theme === "dark" ? "border-white" : "border-black"
-      } flex items-center justify-center shadow-lg shadow-black/25`}
+      className={`w-10 h-10 rounded-full flex items-center justify-center  ${
+        theme === "dark"
+          ? "shadow-sm shadow-white/10"
+          : "shadow-xl shadow-black/25"
+      }`}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <FaSun

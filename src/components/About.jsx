@@ -1,5 +1,5 @@
 import React from "react";
-import project1 from "../assets/projectOne.png";
+import project1 from "../assets/projectThree.png";
 import project2 from "../assets/projectTwo.png";
 import {
   DiJavascript1,

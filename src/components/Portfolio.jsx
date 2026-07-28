@@ -8,6 +8,7 @@ import { useState } from "react";
 // import project6 from "../assets/project6.png";
 import project1 from "../assets/projectOne.png";
 import project2 from "../assets/projectTwo.png";
+import project3 from "../assets/projectThree.png";
 import { AiFillGithub } from "react-icons/ai";
 import ShinyEffect from "./ShinyEffect";
 import Link from "next/link";
@@ -19,7 +20,7 @@ const projects = [
     description: "Wozell website demo built with Next.js.",
     links: {
       site: "https://woztell.vercel.app/en",
-      github: "#",
+      github: "https://github.com/II-EMMA/woztell/tree/master",
     },
   },
   {
@@ -28,7 +29,16 @@ const projects = [
     description: "Marcomista sologan company website.",
     links: {
       site: "https://marcomesta.vercel.app",
-      github: "#",
+      github: "https://github.com/II-EMMA/Marcomesta/tree/master",
+    },
+  },
+  {
+    img: project3.src,
+    title: "Project #3",
+    description: "Fonte website demo built with Next.js.",
+    links: {
+      site: "https://fonte-git-master-emmas-projects-1aaf5875.vercel.app",
+      github: "https://github.com/II-EMMA/fonte/tree/master",
     },
   },
 ];
@@ -63,6 +73,8 @@ const Portfolio = () => {
             View Site
           </Link>
           <Link
+            rel="noopener noreferrer"
+            target="_blank"
             href={projects[currentProject].links.github}
             className="px-4 py-2 bg-gray-800 text-gray-200 text-2xl rounded-lg hover:bg-gray-600 transition duration-300"
           >

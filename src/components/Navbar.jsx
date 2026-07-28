@@ -9,7 +9,7 @@ const Navbar = () => {
   const closeNav = () => setNav(false);
 
   return (
-    <nav className="w-full h-24 dark:text-gray-200 text-gray-700">
+    <nav className="w-full md:h-24 h-24 dark:text-gray-200 text-gray-700 fixed top-0 left-0 z-50 backdrop-blur-md">
       <div className="max-w-[1300px] mx-auto px-6 flex items-center justify-between h-full text-2xl">
         {/* Logo */}
         <Link
@@ -26,7 +26,7 @@ const Navbar = () => {
               <Link href={`#${section}`}>
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </Link>
-              <span className="absolute bottom-0 left-0 w-full h-1 bg-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+              <span className="absolute bottom-0 left-0 w-full h-1 bg-purple-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
             </li>
           ))}
         </ul>
@@ -56,13 +56,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Fixed height/width to cover the screen completely with solid black */}
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-black z-20 transition-transform duration-300 ${
+        className={`fixed inset-0 w-full h-screen bg-black z-40 transition-transform duration-300 ${
           nav ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="font-semibold text-4xl space-y-8 mt-24 text-white text-center">
+        <ul className="font-semibold text-4xl space-y-8 mt-36 text-white text-center">
           {["about", "portfolio", "contact"].map((section) => (
             <li key={section}>
               <Link href={`#${section}`} onClick={closeNav}>
