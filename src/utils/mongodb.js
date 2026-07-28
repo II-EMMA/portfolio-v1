@@ -4,10 +4,15 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 if (!MONGODB_URI) {
   throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env.local",
+    "Please define the MONGODB_URI environment variable inside your Vercel Project Settings.",
   );
 }
 
+/**
+ * Global is used here to maintain a cached connection across hot reloads
+ * in development and prevent connections from growing exponentially
+ * in serverless environments like Vercel.
+ */
 let cached = global.mongoose;
 
 if (!cached) {
@@ -22,13 +27,21 @@ async function connectDB() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      serverSelectionTimeoutMS: 10000, // Timeout after 10 seconds instead of hanging
     };
+
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
       return mongoose;
     });
   }
 
-  cached.conn = await cached.promise;
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
+  }
+
   return cached.conn;
 }
 
